@@ -2,7 +2,7 @@ function m2t(matrix, varargin)
 %% Matlab matrix to LaTeX converter
 %
 %   m2t(matrix) gives LaTeX representation of matrix. Default setting is
-%   matrix with square bracktes. 
+%   matrix with square brackets. 
 %
 %   Supported commands:
 %
@@ -16,9 +16,10 @@ function m2t(matrix, varargin)
 %
 %   Example:
 %
-%   m2t(matrix, 'filename', 'mymatrix.tex')
+%   matrix = [1, 2; 3, 4];
+%   m2t(matrix, 'filename', 'mymatrix.tex');
 %
-%   m2t(matrix, 'brackets', '(', 'decimation', 5)
+%   m2t(matrix, 'brackets', '(', 'decimation', 5);
 %
 %     \begin{pmatrix}
 %      1.00000 & 2.00000 \\ 
@@ -26,8 +27,8 @@ function m2t(matrix, varargin)
 %     \end{pmatrix}
 %
 %
-%   for bug report contact martin.klauco@stuba.sk
-%   version 4.1
+%   for bug report contact martin@klauco.com
+%   version 1.0
 
 %% input check
 if (numel(matrix) < 1)
